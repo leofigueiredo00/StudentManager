@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.MainController" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <TableView fx:id="studentTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="nameColumn" text="Name"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+            <TableColumn fx:id="majorColumn" text="Major"/>
+        </columns>
+    </TableView>
+    <GridPane hgap="10" vgap="10">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="ID"/>
+        <TextField fx:id="nameField" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Name"/>
+        <TextField fx:id="emailField" GridPane.rowIndex="2" GridPane.columnIndex="1" promptText="Email"/>
+        <TextField fx:id="majorField" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="Major"/>
+        <Button text="Add" onAction="#handleAdd" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Button text="Update" onAction="#handleUpdate" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Button text="Delete" onAction="#handleDelete" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+    </GridPane>
+</VBox>
